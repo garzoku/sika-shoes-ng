@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ShoeService } from "./shoe.service";
-import { Shoe } from "./Shoe";
+import { Product } from "./product.model";
 
 @Component({
   selector: "app-root",
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'angular-template';
 
 
-  shoeList: Shoe[] = [];
+  shoeList: Product[] = [];
   constructor(private shoeService: ShoeService) {
   }
   ngOnInit(): void {

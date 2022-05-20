@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
-import { ShoeResponse } from './Shoe';
 import { HttpClient } from '@angular/common/http'
+import { Product } from "./product.model";
+
+type ShoeResponse = {
+  products: Product[];
+}
 
 @Injectable({
   providedIn: 'root'

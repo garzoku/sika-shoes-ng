@@ -1,5 +1,6 @@
-import {Component} from "@angular/core";
-import {Product} from "../product.model"
+import { Component } from "@angular/core";
+import { Product } from "../product.model"
+import { ShoeService } from "../shoe.service";
 
 @Component({
   selector: "app-product-page",
@@ -9,7 +10,14 @@ import {Product} from "../product.model"
 export class ProductPageComponent {
   product?: Product;
   error = false;
+
+  constructor(private shoeService: ShoeService) { }
+
+  shoeList: Product[] = [];
+
   ngOnInit() {
-    // Get product here
+    this.shoeService.shoeList.subscribe(response => {
+      this.shoeList = response.products;
+    })
   }
 }
