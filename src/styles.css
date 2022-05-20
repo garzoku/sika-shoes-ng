@@ -62,11 +62,6 @@
     line-height: 1.5
 }
 
-#about-page {
-    margin-top: 64px;
-    font-size: 30px
-}
-
 .navigation-bar ul {
     display: flex;
     flex-flow: row wrap;
